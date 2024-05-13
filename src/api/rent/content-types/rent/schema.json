@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rents",
+  "info": {
+    "singularName": "rent",
+    "pluralName": "rents",
+    "displayName": "rent"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "company": {
+      "type": "string"
+    },
+    "application": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "biginteger"
+    },
+    "activity": {
+      "type": "text"
+    },
+    "requiredSpace": {
+      "type": "string"
+    },
+    "projectType": {
+      "type": "string"
+    },
+    "subType": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text"
+    },
+    "files": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
