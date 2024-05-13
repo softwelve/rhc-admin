@@ -1,0 +1,53 @@
+diff --git a/node_modules/@strapi/plugin-email/dist/_chunks/Settings-992e5fdd.mjs b/node_modules/@strapi/plugin-email/dist/_chunks/Settings-992e5fdd.mjs
+index d3a6130..1423a05 100644
+--- a/node_modules/@strapi/plugin-email/dist/_chunks/Settings-992e5fdd.mjs
++++ b/node_modules/@strapi/plugin-email/dist/_chunks/Settings-992e5fdd.mjs
+@@ -127,7 +127,7 @@ const SettingsPage = () => {
+               /* @__PURE__ */ jsx(Typography, { children: formatMessage(
+                 {
+                   id: "email.Settings.email.plugin.text.configuration",
+-                  defaultMessage: "The plugin is configured through the {file} file, checkout this {link} for the documentation."
++                  defaultMessage: "The plugin is configured through the {file} file"
+                 },
+                 {
+                   file: "./config/plugins.js",
+diff --git a/node_modules/@strapi/plugin-email/dist/_chunks/en-4fbcf167.mjs b/node_modules/@strapi/plugin-email/dist/_chunks/en-4fbcf167.mjs
+index a65c0ce..711710e 100644
+--- a/node_modules/@strapi/plugin-email/dist/_chunks/en-4fbcf167.mjs
++++ b/node_modules/@strapi/plugin-email/dist/_chunks/en-4fbcf167.mjs
+@@ -14,7 +14,7 @@ const en = {
+   "Settings.email.plugin.placeholder.defaultReplyTo": "ex: Strapi <example@strapi.io>",
+   "Settings.email.plugin.placeholder.testAddress": "ex: developer@example.com",
+   "Settings.email.plugin.subTitle": "Test the settings for the Email plugin",
+-  "Settings.email.plugin.text.configuration": "The plugin is configured through the {file} file, checkout this {link} for the documentation.",
++  "Settings.email.plugin.text.configuration": "The plugin is configured through the {file} file.",
+   "Settings.email.plugin.title": "Configuration",
+   "Settings.email.plugin.title.config": "Configuration",
+   "Settings.email.plugin.title.test": "Test email delivery",
+diff --git a/node_modules/@strapi/plugin-email/dist/_chunks/en-ea59141b.js b/node_modules/@strapi/plugin-email/dist/_chunks/en-ea59141b.js
+index c61282f..0fc4dc6 100644
+--- a/node_modules/@strapi/plugin-email/dist/_chunks/en-ea59141b.js
++++ b/node_modules/@strapi/plugin-email/dist/_chunks/en-ea59141b.js
+@@ -16,7 +16,7 @@ const en = {
+   "Settings.email.plugin.placeholder.defaultReplyTo": "ex: Strapi <example@strapi.io>",
+   "Settings.email.plugin.placeholder.testAddress": "ex: developer@example.com",
+   "Settings.email.plugin.subTitle": "Test the settings for the Email plugin",
+-  "Settings.email.plugin.text.configuration": "The plugin is configured through the {file} file, checkout this {link} for the documentation.",
++  "Settings.email.plugin.text.configuration": "The plugin is configured through the {file} file.",
+   "Settings.email.plugin.title": "Configuration",
+   "Settings.email.plugin.title.config": "Configuration",
+   "Settings.email.plugin.title.test": "Test email delivery",
+diff --git a/node_modules/@strapi/plugin-email/dist/server/index.js b/node_modules/@strapi/plugin-email/dist/server/index.js
+index 8d23af1..a4ddc6b 100644
+--- a/node_modules/@strapi/plugin-email/dist/server/index.js
++++ b/node_modules/@strapi/plugin-email/dist/server/index.js
+@@ -160,8 +160,7 @@ const emailController = {
+       subject: `Strapi test mail to: ${to}`,
+       text: `Great! You have correctly configured the Strapi email plugin with the ${strapi.config.get(
+         "plugin.email.provider"
+-      )} provider. \r
+-For documentation on how to use the email plugin checkout: https://docs.strapi.io/developer-docs/latest/plugins/email.html`
++      )} provider. `
+     };
+     try {
+       await strapi.plugin("email").service("email").send(email);
