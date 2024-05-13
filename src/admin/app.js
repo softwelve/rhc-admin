@@ -13,6 +13,10 @@ const config = {
   menu: {
     logo,
   },
+  tutorials: false,
+  notifications: {
+    releases: false,
+  },
   translations: {
     en: {
       "app.components.LeftMenu.navbrand.title": "Riyadh Holding",
@@ -23,13 +27,13 @@ const config = {
       // "Settings.application.link-pricing": " ",
       // "Settings.application.link-upgrade": " ",
       "Auth.form.register.subtitle": "Credentials are only used to authenticate in admin panel",
-      "Auth.form.register.news.label": "Keep me updated about new features"
+      "Auth.form.register.news.label": "Keep me updated about new features",
+      "app.components.HomePage.welcomeBlock.content": "Congrats! You are logged as the first administrator. To discover the powerful features, we recommend you to create your first Content type!",
+      "app.components.HomePage.welcomeBlock.content.again": "Congrats! You are logged as the first administrator. To discover the powerful features, we recommend you to create your first Content type!",
+      "email.Settings.email.plugin.text.configuration": "The plugin is configured through the ./config/plugins.js file"
+
 
     },
-    tutorials: false,
-    notifications: {
-      releases: false,
-    }
     
   }
 };
