@@ -755,6 +755,7 @@ export interface ApiNewsNews extends Schema.CollectionType {
     singularName: 'news';
     pluralName: 'newses';
     displayName: 'News';
+    description: '';
   };
   options: {
     draftAndPublish: true;
