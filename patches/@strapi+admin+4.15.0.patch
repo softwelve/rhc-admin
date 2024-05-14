@@ -111,6 +111,25 @@ index 66063de..2844e44 100644
              <Route path="/list-plugins" exact>
                <InstalledPluginsPage />
              </Route>
+diff --git a/node_modules/@strapi/admin/admin/src/pages/AuthPage/index.js b/node_modules/@strapi/admin/admin/src/pages/AuthPage/index.js
+index c04cff6..b2b0dea 100644
+--- a/node_modules/@strapi/admin/admin/src/pages/AuthPage/index.js
++++ b/node_modules/@strapi/admin/admin/src/pages/AuthPage/index.js
+@@ -190,10 +190,10 @@ const AuthPage = ({ hasAdmin, setHasAdmin }) => {
+         (authType === 'register' && body.userInfo.news === true) ||
+         (authType === 'register-admin' && body.news === true)
+       ) {
+-        push({
+-          pathname: '/usecase',
+-          search: `?hasAdmin=${hasAdmin}`,
+-        });
++        // push({
++        //   pathname: '/usecase',
++        //   search: `?hasAdmin=${hasAdmin}`,
++        // });
+ 
+         return;
+       }
 diff --git a/node_modules/@strapi/admin/admin/src/pages/HomePage/ContentBlocks.js b/node_modules/@strapi/admin/admin/src/pages/HomePage/ContentBlocks.js
 index 84ec0ac..34caba3 100644
 --- a/node_modules/@strapi/admin/admin/src/pages/HomePage/ContentBlocks.js
