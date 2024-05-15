@@ -22,7 +22,7 @@ services:
       - ./config:/opt/app/config
       - ./src:/opt/app/src
       - ./package.json:/opt/package.json
-      - ./yarn.lock:/opt/yarn.lock
+      - ./package-lock.json:/opt/yarn.lock
     ports:
       - "1337:1337"
     depends_on:
