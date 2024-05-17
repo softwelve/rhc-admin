@@ -1,6 +1,7 @@
 module.exports = ({ env }) => ({
   host: env('HOST', '0.0.0.0'),
   port: env.int('PORT', 1337),
+  url: env('URL', 'https://admin.riyadhholding.sa/'),
   app: {
     keys: env.array('APP_KEYS'),
   },
