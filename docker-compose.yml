@@ -18,11 +18,11 @@ services:
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
       NODE_ENV: development
     volumes:
-      - ./_docker_volumes/public/uploads:/opt/app/public/uploads
-      - ./config:/opt/app/config
+      - ./_docker_volumes/public/uploads:/opt/public/uploads
+      - ./config:/opt/config
       - ./src:/opt/app/src
       - ./package.json:/opt/package.json
-      - ./package-lock.json:/opt/yarn.lock
+      - ./package-lock.json:/opt/package-lock.lock
     ports:
       - "1337:1337"
     depends_on:
