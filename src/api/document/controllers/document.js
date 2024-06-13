@@ -3,7 +3,12 @@ const axios = require('axios');
 module.exports = {
   async downloadDocument(ctx) {
     try {
-      const { document_name } = ctx.request.body;
+      const { document_name,token } = ctx.query;
+
+      if (!document_name) {
+        return ctx.throw(400, 'document_name query parameter is required');
+      }
+
       const url = `https://riyadhholding.sharepoint.com/sites/Shamil/_layouts/download.aspx?SourceUrl=https://riyadhholding.sharepoint.com/sites/Shamil/Assets/${document_name}`;
 
       // Download the file from SharePoint
@@ -13,7 +18,7 @@ module.exports = {
         responseType: 'arraybuffer', // This will handle the binary data
         headers: {
           // Add any required headers here, such as authentication
-          'Authorization': `Bearer YOUR_ACCESS_TOKEN`,
+          'Authorization': `Bearer `+token,
         },
       });
 
