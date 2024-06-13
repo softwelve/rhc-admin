@@ -3,7 +3,7 @@ const axios = require('axios');
 module.exports = {
   async downloadDocument(ctx) {
     try {
-      const { document_name, token } = ctx.query;
+      const { document_name } = ctx.query;
 
       if (!document_name) {
         return ctx.throw(400, 'document_name query parameter is required');
@@ -13,7 +13,7 @@ module.exports = {
         return ctx.throw(400, 'token query parameter is required');
       }
 
-      const url = `https://riyadhholding.sharepoint.com/sites/Shamil/_layouts/download.aspx?SourceUrl=https://riyadhholding.sharepoint.com/sites/Shamil/Assets/${document_name}`;
+      const url = document_name;
 
       console.log('Requesting URL:', url);
 
@@ -22,9 +22,6 @@ module.exports = {
         url,
         method: 'GET',
         responseType: 'arraybuffer', // This will handle the binary data
-        headers: {
-          'Authorization': `Bearer ${token}`,
-        },
         maxRedirects: 0, // Prevent automatic redirection
       }).catch(error => {
         if (error.response && error.response.status === 302) {
