@@ -1,7 +1,7 @@
 module.exports = {
   routes: [
     {
-      method: 'POST',
+      method: 'GET',
       path: '/download-document',
       handler: 'document.downloadDocument',
       config: {
