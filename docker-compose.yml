@@ -31,6 +31,7 @@ services:
   postgres:
     container_name: postgres
     platform: linux/amd64 #for platform error on Apple M1 chips
+    restart: unless-stopped
     env_file:
       - path: ./.env
         required: true
